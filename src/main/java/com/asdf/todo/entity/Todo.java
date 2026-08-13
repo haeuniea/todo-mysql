@@ -1,4 +1,4 @@
-package com.asdf.todo.model;
+package com.asdf.todo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

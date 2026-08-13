@@ -6,7 +6,7 @@ import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.asdf.todo.model.Todo;
+import com.asdf.todo.entity.Todo;
 import com.asdf.todo.service.TodoService;
 import java.util.Collections;
 import org.junit.jupiter.api.Test;
