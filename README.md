@@ -77,40 +77,40 @@ Spring Data JPA를 이용하여 Todo 데이터를 MySQL에 저장합니다.
 
 ## 실행 방법
 
-Docker MySQL 컨테이너를 실행합니다.
+### 1. MySQL 실행
+
+Docker를 이용하여 MySQL 컨테이너를 실행합니다.
 
 ```bash
 docker start mysql-todo
 ```
 
-WSL2 터미널에서 프로젝트 디렉토리로 이동하여 실행합니다.
+> 최초 실행 시에는 프로젝트에서 사용하는 MySQL 컨테이너를 먼저 생성해야 합니다.  
+> mysql-todo용 Docker MySQL은 호스트의 `3307` 포트를 사용합니다.
+
+### 2. 프로젝트 빌드
+
+WSL2 터미널에서 프로젝트 디렉토리로 이동하여 빌드합니다.
 
 ```bash
 cd ~/eog-springboot4/todo-mysql
 gradle build
+```
+
+### 3. 애플리케이션 실행
+
+```bash
 gradle bootRun
 ```
 
-> 기존 MySQL의 `3306` 포트와의 충돌을 피하기 위해 Docker MySQL은 호스트의 `3307` 포트를 사용합니다.
+### 4. Swagger UI 접속
 
-Gradle Wrapper를 이용하여 실행할 수도 있습니다.
-
-```bash
-./gradlew clean build
-./gradlew bootRun
-```
-
-## Swagger UI
+애플리케이션 실행 후 브라우저에서 Swagger UI에 접속하여 API를 확인하고 테스트할 수 있습니다.
 
 ```text
 http://localhost:8080/swagger-ui/index.html
 ```
 
-OpenAPI 명세:
-
-```text
-http://localhost:8080/v3/api-docs
-```
 
 ## 테스트
 
